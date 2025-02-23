@@ -5,36 +5,40 @@
 #include "Article.h"
 using namespace std;
 
-class salesOrder {
+class SalesOrder {
     private:
         int id;
         string cliente;
         string fecha;
-        Article article;
         float total;
-    public:
+        public:
+        Article article;
         // Constructores
-        salesOrder();
-        salesOrder(int id);
-        salesOrder(int id, string cliente);
-        salesOrder(int id, string cliente, string fecha);
-        salesOrder(int id, string cliente, string fecha, Article article);
-        salesOrder(int id, string cliente, string fecha, Article article, float total);
+        SalesOrder();
+        SalesOrder(int id);
+        SalesOrder(int id, string cliente);
+        SalesOrder(int id, string cliente, string fecha);
+        SalesOrder(int id, string cliente, string fecha, Article article);
+        SalesOrder(int id, string cliente, string fecha, Article article, float total);
 
         //Destructor
-        ~salesOrder();
+        ~SalesOrder();
 
         //Getters y Setters
-        int getId() const;
+        int getId(void);
         void setId(int id);
-        string getCliente() const;
+        string getCliente(void);
         void setCliente(string cliente);
-        string getFecha() const;
+        string getFecha(void);
         void setFecha(string fecha);
-        Article getArticle() const;
+        Article getArticle(void);
         void setArticle(Article article);
-        float getTotal() const;
+        float getTotal(void);
         void setTotal(float total);
+
+        // Metodos adicionales
+        void showOrderDetails();
+        float calcularTotal();
 };
 
 #endif
