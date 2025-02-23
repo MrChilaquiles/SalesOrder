@@ -1,4 +1,4 @@
-#include "InventoryDetail.h"
+#include "../headers/InventoryDetail.h"
 
 //Constructores
 InventoryDetail::InventoryDetail(){
