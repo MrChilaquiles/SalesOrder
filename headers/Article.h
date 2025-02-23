@@ -11,12 +11,33 @@ class Article {
         string nombre;
         float precio;
         float cantidad;
+        public:
         InventoryDetail detalle;
-    public:
         //Constructores
         Article();
-        Article();
+        Article(int id);
+        Article(int id, string nombre);
+        Article(int id, string nombre, float precio);
+        Article(int id, string nombre, float precio, float cantidad);
+        Article(int id, string nombre, float precio, float cantidad, InventoryDetail detalle);
+
+        //Destructor
         ~Article();
+
+        //Getters y Setters
+        void setId(int);
+        int getId(void);
+        void setNombre(string);
+        string getNombre(void);
+        void setPrecio(float);
+        float getPrecio(void);
+        void setCantidad(float);
+        float getCantidad(void);
+        void setDetalle(InventoryDetail);
+        InventoryDetail getDetalle(void);
+
+        // Metodos adicionales
+        void showArticleDetails();
 };
 
 #endif
